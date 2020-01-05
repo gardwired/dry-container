@@ -11,6 +11,8 @@ jobs:
     if: github.event.action == 'sync_configs'
     steps:
       - uses: actions/checkout@v1
+        with:
+          ref: debugging-sync-configs
       - name: Set up Ruby
         uses: eregon/use-ruby-action@master
         with:
